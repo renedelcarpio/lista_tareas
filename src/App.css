@@ -1,6 +1,6 @@
 :root {
-	--verde: #80BE4E;
-	--azul: #007AEA;
+	--verde: #80be4e;
+	--azul: #007aea;
 }
 
 .contenedor {
@@ -9,7 +9,7 @@
 	height: 100%;
 	max-height: 90vh;
 	overflow: auto;
-	box-shadow: 0 2px 10px rgba(139,139,139,.25);
+	box-shadow: 0 2px 10px rgba(139, 139, 139, 0.25);
 	border-radius: 3px;
 	display: grid;
 	grid-template-rows: auto auto 1fr;
@@ -51,16 +51,16 @@
 }
 
 /* * --- --- ---  FORMULARIO AGREGAR --- --- --- */
-.form-todo {
+.formulario-tareas {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
 	padding: 2rem;
-	box-shadow: 0 2px 10px rgba(139,139,139,.25);
+	box-shadow: 0 2px 10px rgba(139, 139, 139, 0.25);
 }
 
-.form-todo__input {
+.formulario-tareas__input {
 	border: none;
 	padding: 1.5rem;
 	width: 100%;
@@ -69,12 +69,12 @@
 	border-bottom: 2px solid #b8b8b8;
 }
 
-.form-todo__input:focus {
+.formulario-tareas__input:focus {
 	outline: none;
 	border-bottom: 2px solid var(--azul);
 }
 
-.form-todo__btn {
+.formulario-tareas__btn {
 	position: absolute;
 	bottom: 4rem;
 	right: 2rem;
@@ -83,7 +83,7 @@
 	cursor: pointer;
 }
 
-.form-todo__icon-btn {
+.formulario-tareas__icono-btn {
 	font-size: 2.2rem;
 	color: var(--verde);
 }
@@ -100,7 +100,7 @@
 	height: 60px;
 	padding: 0 20px;
 	align-items: center;
-	color: #4B4B4B;
+	color: #4b4b4b;
 	font-size: 18px;
 	display: grid;
 	grid-template-columns: auto 1fr auto;
@@ -116,7 +116,7 @@
 }
 
 .lista-tareas__tarea:nth-child(even) {
-	background: #F3F3F3;
+	background: #f3f3f3;
 }
 
 .lista-tareas__contenedor-botones {
@@ -136,7 +136,7 @@
 .lista-tareas__icono-accion {
 	margin-left: 20px;
 	opacity: 0;
-	transition: .3s ease all;
+	transition: 0.3s ease all;
 }
 
 .lista-tareas__mensaje {

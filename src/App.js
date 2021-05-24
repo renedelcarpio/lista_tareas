@@ -1,31 +1,30 @@
 import React, { useState } from 'react';
 import './App.css';
-import FormToDo from './components/FormToDo';
-import Header from './components/Header'
-import TodoList from './components/TodoList';
+import FormularioTareas from './components/FormularioTareas';
+import Header from './components/Header';
 
 const App = () => {
-  const [tareas, setTareas] = useState(
-    [
-      {
-        id: 1,
-        text: 'Lavar la ropa',
-        complete: false
-      },
-      {
-        id: 2,
-        text: 'Grabar turorial',
-        complete: false
-      }
-    ]
-  )
-  return (
-    <div className='contenedor'>
-      <Header/>
-      <FormToDo tareas={tareas} setTodo={setTareas} />
-      <TodoList tareas={tareas}/>
-    </div>
-  );
-}
+	const [tareas, cambiarTareas] = useState([
+		{
+			id: 1,
+			texto: 'Lavar la ropa',
+			completada: false,
+		},
+		{
+			id: 2,
+			texto: 'Terminar el curso',
+			completada: false,
+		},
+	]);
+
+	console.log(tareas);
+
+	return (
+		<div className='contenedor'>
+			<Header />
+			<FormularioTareas tareas={tareas} cambiarTareas={cambiarTareas} />
+		</div>
+	);
+};
 
 export default App;

@@ -12,6 +12,29 @@ const ListaTareas = ({ tareas, cambiarTareas }) => {
 			})
 		);
 	};
+
+	const editarTarea = (id, nuevoTexto) => {
+		cambiarTareas(
+			tareas.map((tarea) => {
+				if (tarea.id === id) {
+					return { ...tarea, texto: nuevoTexto };
+				}
+				return tarea;
+			})
+		);
+	};
+
+	const borrarTarea = (id) => {
+		cambiarTareas(
+			tareas.filter((tarea) => {
+				if (tarea.id !== id) {
+					return tarea;
+				}
+				return;
+			})
+		);
+	};
+
 	return (
 		<ul className='lista-tareas'>
 			{tareas.length > 0 ? (
@@ -21,6 +44,8 @@ const ListaTareas = ({ tareas, cambiarTareas }) => {
 							key={tarea.id}
 							tarea={tarea}
 							toggleCompletada={toggleCompletada}
+							editarTarea={editarTarea}
+							borrarTarea={borrarTarea}
 						/>
 					);
 				})
